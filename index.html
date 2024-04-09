@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="stylesheet.css">
 
   <style>
+    body{
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      
     .container {
       display: flex;
       align-items: center; /* Center vertically */
@@ -44,6 +49,20 @@
     .button-container button:hover {
       background-color: #00c552;
     }
+      nav {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #049918;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      color: #00b351;
+    }
   </style>
 </head>
 <body>
@@ -59,7 +78,11 @@
 
         </pre>
       </div>
-      
+      <nav>
+        <a href="home.html">Home</a> |
+        <a href="index.html">Links</a> |
+        <a href="career.html">Career</a>
+      </nav>
       <!-- Commands grid -->
       <div class="button-container">
         <commands-grid></commands-grid>
