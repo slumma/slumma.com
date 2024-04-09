@@ -5,65 +5,9 @@
   <meta name="color-scheme" content="dark light" />
   <meta name="robots" content="noindex" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="stylesheet.css">
+
   <title>slumma's splashpage</title>
-
-  <style>
-    body{
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      font-weight: bold;
-      background-color: #000000;
-    }
-    .container {
-      display: flex;
-      align-items: center; 
-      justify-content: center;
-      min-height: 100vh;
-    }
-
-    .ascii-container {
-      display: grid;
-      justify-content: flex-start;
-      margin-bottom: 20px; 
-    }
-
-    .button-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .button-container button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .button-container button:hover {
-      background-color: #00c552;
-    }
-    nav {
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #049918;
-      margin: 0 10px;
-    }
-
-    nav a:hover {
-      color: #00b351;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -78,7 +22,7 @@
         </pre>
       </div>
       <nav>
-        <a href="home.html">Home</a> |
+        <a href="portfolio.html">Portfolio</a> |
         <a href="index.html">Links</a> |
         <a href="career.html">Career</a>
       </nav>
@@ -87,21 +31,6 @@
       </div>
     </main>
   </div>
-
-  <script>
-    const CONFIG = {
-      commandPathDelimiter: '/',
-      commandSearchDelimiter: ' ',
-      defaultSearchTemplate: 'https://www.startpage.com/sp/search?query={}&t=device&lui=english&sc=3r8Z6TaodHKE00&cat=web&prfe=bbafe1608394d1ffe44a99e347f2f55d341adb05d5e26b590570de57993eacdf1b055c2c7b0c120515ba98298b2c7fc148c3744e47b5e2c27b71a5177b4f05f8bac111f44001afa78f7a0a69',
-      openLinksInNewTab: true,
-      rainColumns: 200,
-      rainFade: 0.2,
-      rainFrameRate: 1000 / 18,
-      rainResilience: 0.8,
-      rainSpeed: 1,
-      suggestionLimit: 4,
-    };
-  </script>
   <script type="module">
     const commands = [
       { emoji: '📬', name: 'Proton', url: 'https://mail.proton.me/' },
@@ -128,7 +57,7 @@
               grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
               gap: 20px;
               justify-content: center;
-              align-content: center; /* Center content vertically */
+              align-content: center;
               margin-top: 20px;
               margin-bottom: 20px;
             }
