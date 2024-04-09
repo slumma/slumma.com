@@ -1,0 +1,97 @@
+
+    body{
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #000000;
+    }
+    .container {
+      display: flex;
+      align-items: center; 
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .ascii-container {
+      display: grid;
+      justify-content: center;
+      margin-bottom: 20px; 
+    }
+
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .button-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-container button:hover {
+      background-color: #00c552;
+    }
+    nav {
+      margin-top: 0px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #049918;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      color: #00b351;
+    }
+    .portfolio-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #049918;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+  
+      .project {
+        margin-bottom: 20px;
+      }
+  
+      .project-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+  
+      .project-description {
+        font-size: 16px;
+        font-weight: lighter;
+      }
+  
+      .project-link {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 10px;
+        font-size: 16px;
+        background-color: #049918;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+      }
+  
+      .project-link:hover {
+        background-color: #00c552;
+      }
