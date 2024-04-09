@@ -6,26 +6,25 @@
   <meta name="robots" content="noindex" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>slumma's splashpage</title>
-  <link rel="stylesheet" href="stylesheet.css">
 
   <style>
     body{
       font-family: Arial, sans-serif;
       font-size: 16px;
-      font-weight: bold
+      font-weight: bold;
       background-color: #000000;
-      
+    }
     .container {
       display: flex;
-      align-items: center; /* Center vertically */
-      justify-content: center; /* Center horizontally */
+      align-items: center; 
+      justify-content: center;
       min-height: 100vh;
     }
 
     .ascii-container {
       display: grid;
       justify-content: flex-start;
-      margin-bottom: 20px; /* Adjust margin as needed */
+      margin-bottom: 20px; 
     }
 
     .button-container {
@@ -50,7 +49,7 @@
     .button-container button:hover {
       background-color: #00c552;
     }
-      nav {
+    nav {
       margin-top: 10px;
       text-align: center;
     }
@@ -69,7 +68,6 @@
 <body>
   <div class="container">
     <main>
-      <!-- ASCII logo container -->
       <div class="ascii-container">
         <pre class="ascii-logo">
         __
@@ -84,7 +82,6 @@
         <a href="index.html">Links</a> |
         <a href="career.html">Career</a>
       </nav>
-      <!-- Commands grid -->
       <div class="button-container">
         <commands-grid></commands-grid>
       </div>
