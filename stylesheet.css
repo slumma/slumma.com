@@ -1,36 +1,53 @@
 
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
     body{
       font-family: Arial, sans-serif;
       font-size: 16px;
       font-weight: bold;
       background-color: #000000;
-    }
-    .container {
+      max-width: 50em;
+      margin: auto;
       display: flex;
-      align-items: center; 
-      justify-content: center;
-      min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    height: 100dvh;
     }
 
-    .ascii-container {
-      display: grid;
-      justify-content: center;
-      margin-bottom: 20px;
-      color: white;
-    }
-
-    .button-container {
+    .grid-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 20px;
       justify-content: center;
+      align-content: center;
       margin-top: 20px;
+      margin-bottom: 20px;
     }
 
+    .command {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #049918;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .command:hover {
+      background-color: #078d24;
+    }
+    .button{
+      color: white;
+    }
     .button-container button {
       padding: 10px 20px;
       font-size: 16px;
-      background-color: #007bff;
+      background-color: white;
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -58,8 +75,8 @@
       color: #00b351;
     }
     .portfolio-content {
-        max-width: 800px;
-        margin: 0 auto;
+        /* max-width: 800rem; */
+        /* margin: 0 auto; */
         padding: 20px;
         border: 2px solid #049918;
         border-radius: 10px;
@@ -98,4 +115,21 @@
   
       .project-link:hover {
         background-color: #00c552;
+      }
+
+      .ascii-container {
+          margin: auto;    
+      }
+    
+      .ascii-logo {
+        text-align: center;
+        transition: font-size 0.3s ease;
+      }
+    
+      
+      @media only screen and (max-width: 608px) {
+        .ascii-logo {
+          font-size: .6em; /* Font size for small screens */
+        }
+        
       }
