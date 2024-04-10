@@ -10,73 +10,92 @@
   <title>slumma's splashpage</title>
 </head>
 <body>
-  <div class="container">
-    <main>
+  <div class="container" style="margin-top: 2em;">
+    <main >
       <div class="ascii-container">
         <pre class="ascii-logo">
-        __
-   ___ / /_ ____ _  __ _  ___ _ _______  __ _ 
- ( _-&lt;/ / // /  ' \/  ' \/ _ `// __/ _ \/  ' \
-/___/ _/\_,_/_/_/_/_/_/_/\_,_(_)__/\___/_/_/_/
-
+     _                                                      
+    | |                                                     
+ ___| |_   _ _ __ ___  _ __ ___   __ _   ___ ___  _ __ ___  
+/ __| | | | | '_ ` _ \| '_ ` _ \ / _` | / __/ _ \| '_ ` _ \ 
+\__ \ | |_| | | | | | | | | | | | (_| || (_| (_) | | | | | |
+|___/_|\__,_|_| |_| |_|_| |_| |_|\__,_(_)___\___/|_| |_| |_|
+                                                            
+                                                            
         </pre>
       </div>
-      <nav>
+      <nav style="display: flex; justify-content: center;">
         <a href="portfolio.html">Portfolio</a> |
         <a href="index.html">Links</a> |
         <a href="career.html">Career</a>
       </nav>
-      <div class="button-container">
-        <commands-grid></commands-grid>
+      <div class="button-stuff" style="margin: 0px 4em; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1em;">
+        <a href="https://mail.proton.me/" target="_blank" style="text-decoration: none;" class="button">
+          <div style="display: flex; justify-content: center; align-items: center; background: #049918; border-radius: 2em; min-height: 2em;">
+            <p>📬</p>
+            <p> Proton</p>
+          </div>
+        </a>
+        <a href="https://ship.pirateship.com/" target="_blank" style="text-decoration: none;" class="button">
+          <div style="display: flex; justify-content: center; align-items: center; background: #049918; border-radius: 2em; min-height: 2em;">
+            <p>📦</p>
+            <p> PirateShip</p>
+          </div>
+        </a>
+        <a href="https://thepiratebay10.xyz/" target="_blank" style="text-decoration: none;" class="button">
+          <div style="display: flex; justify-content: center; align-items: center; background: #049918; border-radius: 2em; min-height: 2em;">
+            <p>🏴‍☠️</p>
+            <p> PirateBay</p>
+          </div>
+        </a>
+        <a href="https://www.speedtest.net/" target="_blank" style="text-decoration: none;" class="button">
+          <div style="display: flex; justify-content: center; align-items: center; background: #049918; border-radius: 2em; min-height: 2em;">
+            <p>🔧</p>
+            <p> Speedtest</p>
+          </div>
+        </a>
+        <a href="https://leetcode.com/problemset/" target="_blank" style="text-decoration: none;" class="button">
+          <div style="display: flex; justify-content: center; align-items: center; background: #049918; border-radius: 2em; min-height: 2em;">
+            <p>⌨️</p>
+            <p> LeetCode</p>
+          </div>
+        </a>
+        <a href="https://github.com/" target="_blank" style="text-decoration: none;" class="button">
+          <div style="display: flex; justify-content: center; align-items: center; background: #049918; border-radius: 2em; min-height: 2em;">
+            <p>💻</p>
+            <p> GitHub</p>
+          </div>
+        </a>
+        <a href="http://slskd.slumma.com/" target="_blank" style="text-decoration: none;" class="button">
+          <div style="display: flex; justify-content: center; align-items: center; background: #049918; border-radius: 2em; min-height: 2em;">
+            <p>💀</p>
+            <p> Soulseek GUI</p>
+          </div>
+        </a>
+        <a href="https://music.slumma.com/" target="_blank" style="text-decoration: none;" class="button">
+          <div style="display: flex; justify-content: center; align-items: center; background: #049918; border-radius: 2em; min-height: 2em;">
+            <p>🎵</p>
+            <p> Music</p>
+          </div>
+        </a>
+        <a href="https://adguard.slumma.com" target="_blank" style="text-decoration: none;" class="button">
+          <div style="display: flex; justify-content: center; align-items: center; background: #049918; border-radius: 2em; min-height: 2em;">
+            <p>🚫</p>
+            <p> Adguard</p>
+          </div>
+        </a>
       </div>
     </main>
   </div>
   <script type="module">
-    const commands = [
-      { emoji: '📬', name: 'Proton', url: 'https://mail.proton.me/' },
-      { emoji: '📬  ', name: 'Disroot', url: 'https://webmail.disroot.org/' },
-      { emoji: '📺', name: 'Jellyfin', url: 'https://tv.room300.net' },
-      { emoji: '📺', name: 'Plex', url: 'https://plex.room300.net' },
-      { emoji: '📺', name: 'Youtube', url: 'https://youtube.com' },
-      { emoji: '🎵', name: 'Music', url: 'https://drive.room300.net/index.php/s/0OStDuwwj7us6We' },
-      { emoji: '🪛', name: 'Speedtest', url: 'https://www.speedtest.net/' },
-      { emoji: '📦', name: 'Pirateship', url: 'https://ship.pirateship.com/ship' },
-      { emoji: '🏴‍☠️', name: 'Piratebay', url: 'https://thepiratebay10.org/' },
-      { emoji: '🚫', name: 'AdGuard', url: 'https://adguard.slumma.com' }
-    ];
-
+    
     class CommandsGrid extends HTMLElement {
       constructor() {
         super();
         this.attachShadow({ mode: 'open' });
         const template = document.createElement('template');
         template.innerHTML = `
-          <style>
-            .grid-container {
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-              gap: 20px;
-              justify-content: center;
-              align-content: center;
-              margin-top: 20px;
-              margin-bottom: 20px;
-            }
-
-            .command {
-              padding: 10px 20px;
-              font-size: 16px;
-              background-color: #049918;
-              color: #fff;
-              border: none;
-              border-radius: 5px;
-              cursor: pointer;
-              transition: background-color 0.3s ease;
-            }
-
-            .command:hover {
-              background-color: #078d24;
-            }
-          </style>
+          
           <div class="grid-container"></div>
         `;
         this.shadowRoot.appendChild(template.content.cloneNode(true));
